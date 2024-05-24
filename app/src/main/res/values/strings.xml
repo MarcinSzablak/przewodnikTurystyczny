@@ -4,4 +4,6 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="poznaj_olszty_skie_kebaby">Poznaj Olsztyńskie Kebaby</string>
+    <string name="lorem_Ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat quam quis est sagittis tempus. Donec auctor consectetur convallis. Nunc augue nulla, sodales quis ante ac, sodales rhoncus erat. Aliquam imperdiet sed tellus nec aliquet. Pellentesque eros magna, elementum ut mi laoreet, laoreet luctus diam. Nam a turpis convallis, pellentesque elit imperdiet, tincidunt lectus. Proin vitae ligula eu mauris eleifend aliquam. Integer odio ligula, tincidunt quis vestibulum quis, iaculis vel metus. Suspendisse dictum varius viverra. Quisque consequat suscipit lorem non euismod. Proin feugiat tortor ante, id pretium massa lacinia et. Nulla nec facilisis lectus. Suspendisse potenti.</string>
+    <string name="button">kliknij mnie!!</string>
 </resources>
