@@ -5,24 +5,36 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 
 class InformationFragment : Fragment() {
 
+    lateinit var counterButton: Button
+    private lateinit var model: AppViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // Any setup operations can be done here
+        model = ViewModelProvider(requireActivity()).get(AppViewModel::class.java)
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_information, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        // Perform any operations on the view after it has been created
+
+        counterButton = view.findViewById<Button>(R.id.count_button)
+
+        counterButton.setOnClickListener {
+            val number = model.countNumber.value?.plus(1)
+            model.countNumber.value = number
+            Toast.makeText(activity, "Button Clicked!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
