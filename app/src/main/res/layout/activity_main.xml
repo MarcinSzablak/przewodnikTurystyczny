@@ -15,7 +15,7 @@
             android:layout_height="wrap_content"
             app:navigationIcon="@drawable/baseline_arrow_back_24"
             app:menu="@menu/toolbar"
-            android:background="@color/white"/>
+            android:background="?attr/colorPrimary"/>
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragment_container_view"
