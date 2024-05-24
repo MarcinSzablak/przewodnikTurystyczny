@@ -13,7 +13,7 @@ import androidx.lifecycle.ViewModelProvider
 class EndFragment : Fragment() {
     private lateinit var model: AppViewModel
     private lateinit var countView: TextView
-
+    private lateinit var choosenKebabView: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         model = ViewModelProvider(requireActivity()).get(AppViewModel::class.java)
@@ -30,11 +30,17 @@ class EndFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         countView = view.findViewById<Button>(R.id.count_view)
+        choosenKebabView = view.findViewById<Button>(R.id.choosen_kebab_view)
 
         val countObserver = Observer<Int> { count ->
             countView.text = count.toString()
         }
 
+        val kebabObserver = Observer<String> { kebab ->
+            choosenKebabView.text = kebab
+        }
+
         model.countNumber.observe(viewLifecycleOwner, countObserver)
+        model.choosenKebab.observe(viewLifecycleOwner, kebabObserver)
     }
 }

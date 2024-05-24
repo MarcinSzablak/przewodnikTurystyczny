@@ -14,7 +14,9 @@
             android:layout_height="wrap_content"
             android:text="ilość kliknięć"
             android:textSize="40sp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:background="@color/beige"
+            android:textColor="@color/black"/>
         <TextView
             android:id="@+id/count_view"
             android:layout_width="match_parent"
@@ -22,7 +24,27 @@
             android:text=""
             tools:text="0"
             android:textSize="40sp"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:background="@color/beige"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wybrany Kebab"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:background="@color/green"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/choosen_kebab_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            tools:text="Kebab 1"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            android:background="@color/green"
+            android:textColor="@color/black"/>
     </LinearLayout>
 
 </FrameLayout>

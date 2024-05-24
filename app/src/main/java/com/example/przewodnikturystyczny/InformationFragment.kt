@@ -34,7 +34,6 @@ class InformationFragment : Fragment() {
         counterButton.setOnClickListener {
             val number = model.countNumber.value?.plus(1)
             model.countNumber.value = number
-            Toast.makeText(activity, "Button Clicked!", Toast.LENGTH_SHORT).show()
         }
     }
 }
