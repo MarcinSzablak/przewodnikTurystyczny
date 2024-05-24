@@ -2,10 +2,6 @@ package com.example.przewodnikturystyczny
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
-import android.view.View
-import android.widget.Toast
-import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.google.android.material.appbar.MaterialToolbar
 
@@ -36,6 +32,11 @@ class MainActivity : AppCompatActivity() {
         topAppBar.setNavigationOnClickListener {
             currentFragmentIndex = goBack(fragmentList, currentFragmentIndex)
             supportFragmentManager.beginTransaction()
+                .setCustomAnimations(
+                    R.anim.slide_in_left,
+                    R.anim.fade_out,
+                    R.anim.fade_in,
+                    R.anim.slide_out )
                 .replace(R.id.fragment_container_view, fragmentList[currentFragmentIndex])
                 .commit()
         }
@@ -44,6 +45,11 @@ class MainActivity : AppCompatActivity() {
                 R.id.forward -> {
                     currentFragmentIndex = goForward(fragmentList, currentFragmentIndex)
                     supportFragmentManager.beginTransaction()
+                        .setCustomAnimations(
+                            R.anim.slide_in_right,
+                            R.anim.fade_out,
+                            R.anim.fade_in,
+                            R.anim.slide_out )
                         .replace(R.id.fragment_container_view, fragmentList[currentFragmentIndex])
                         .commit()
                     true
